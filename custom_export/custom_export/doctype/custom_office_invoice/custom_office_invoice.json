@@ -1,0 +1,369 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:EXP-{date}-{####}",
+ "creation": "2023-07-12 14:06:03.584841",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "exporter",
+  "address",
+  "invoice_no",
+  "place_of_receipt_by_pre_carrier",
+  "column_break_01ely",
+  "date",
+  "country_origin_of_goods",
+  "marks_and_nos",
+  "port_of_loading",
+  "exporters_reference_section",
+  "iec_code",
+  "gstn",
+  "column_break_dkuvm",
+  "pan_no",
+  "terms_of_delivery_and_payment_section",
+  "account_no",
+  "bank",
+  "bank_address",
+  "column_break_i5bfe",
+  "ifsc_code",
+  "ad_code",
+  "payment_term",
+  "consignee_details_section",
+  "consignee",
+  "final_destination",
+  "pre_carriage_by",
+  "vessel_or_flight",
+  "description_of_goods",
+  "column_break_rqwdm",
+  "consignee_address",
+  "country_of_final_destination",
+  "port_of_destination",
+  "no_of_packages",
+  "packing_slip",
+  "description",
+  "description_of_goods_1",
+  "section_break_tuuho",
+  "total_pcs",
+  "total_gross_weight",
+  "fob_in_usd",
+  "total_rate_on",
+  "column_break_hecwh",
+  "total_weight_with_box_in_gram",
+  "total_gold_weight",
+  "freight_charge_in_usd",
+  "total_rate",
+  "gjepc_details_section",
+  "file_name",
+  "column_break_gupnq",
+  "rate_in_ounce",
+  "section_break_c7uxb",
+  "gjepc_metal_rate_details",
+  "section_break_qqjtz",
+  "work_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "exporter",
+   "fieldtype": "Link",
+   "label": "Exporter",
+   "options": "Company"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "invoice_no",
+   "fieldtype": "Data",
+   "label": "Invoice No"
+  },
+  {
+   "fieldname": "place_of_receipt_by_pre_carrier",
+   "fieldtype": "Data",
+   "label": "Place of Receipt by pre Carrier"
+  },
+  {
+   "fieldname": "column_break_01ely",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "country_origin_of_goods",
+   "fieldtype": "Link",
+   "label": "Country Origin Of Goods",
+   "options": "Country"
+  },
+  {
+   "fieldname": "marks_and_nos",
+   "fieldtype": "Data",
+   "label": "Marks and Nos"
+  },
+  {
+   "fieldname": "port_of_loading",
+   "fieldtype": "Data",
+   "label": "Port of Loading"
+  },
+  {
+   "fieldname": "exporters_reference_section",
+   "fieldtype": "Section Break",
+   "label": "Exporter's Reference "
+  },
+  {
+   "fieldname": "iec_code",
+   "fieldtype": "Data",
+   "label": "IEC Code"
+  },
+  {
+   "fieldname": "gstn",
+   "fieldtype": "Data",
+   "label": "GSTN"
+  },
+  {
+   "fieldname": "column_break_dkuvm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pan_no",
+   "fieldtype": "Data",
+   "label": "PAN No"
+  },
+  {
+   "fieldname": "terms_of_delivery_and_payment_section",
+   "fieldtype": "Section Break",
+   "label": "Terms of Delivery and Payment"
+  },
+  {
+   "fieldname": "account_no",
+   "fieldtype": "Data",
+   "label": "Account No"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Data",
+   "label": "Bank"
+  },
+  {
+   "fieldname": "bank_address",
+   "fieldtype": "Data",
+   "label": "Bank Address"
+  },
+  {
+   "fieldname": "column_break_i5bfe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  },
+  {
+   "fieldname": "ad_code",
+   "fieldtype": "Data",
+   "label": "AD Code"
+  },
+  {
+   "fieldname": "payment_term",
+   "fieldtype": "Data",
+   "label": "Payment Term"
+  },
+  {
+   "fieldname": "consignee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Consignee Details"
+  },
+  {
+   "fieldname": "consignee",
+   "fieldtype": "Data",
+   "label": "Consignee"
+  },
+  {
+   "fieldname": "final_destination",
+   "fieldtype": "Data",
+   "label": "Final Destination"
+  },
+  {
+   "fieldname": "pre_carriage_by",
+   "fieldtype": "Data",
+   "label": "Pre Carriage By "
+  },
+  {
+   "default": "AIR FREIGHT",
+   "fieldname": "vessel_or_flight",
+   "fieldtype": "Data",
+   "label": "Vessel or Flight"
+  },
+  {
+   "fieldname": "description_of_goods",
+   "fieldtype": "Data",
+   "label": "Description of Goods"
+  },
+  {
+   "fieldname": "column_break_rqwdm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consignee_address",
+   "fieldtype": "Data",
+   "label": "Consignee Address"
+  },
+  {
+   "fieldname": "country_of_final_destination",
+   "fieldtype": "Link",
+   "label": "Country of Final Destination",
+   "options": "Country"
+  },
+  {
+   "fieldname": "port_of_destination",
+   "fieldtype": "Data",
+   "label": "Port of Destination"
+  },
+  {
+   "fieldname": "no_of_packages",
+   "fieldtype": "Data",
+   "label": "No of Packages "
+  },
+  {
+   "fieldname": "packing_slip",
+   "fieldtype": "Link",
+   "label": "Packing Slip",
+   "options": "Packing Slip"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Section Break",
+   "label": "Packing Slip Description "
+  },
+  {
+   "fieldname": "description_of_goods_1",
+   "fieldtype": "Table",
+   "label": "Description of Goods",
+   "options": "Description of Goods"
+  },
+  {
+   "fieldname": "section_break_tuuho",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_pcs",
+   "fieldtype": "Data",
+   "label": "Total Pcs"
+  },
+  {
+   "fieldname": "total_gross_weight",
+   "fieldtype": "Data",
+   "label": "Total Gross Weight"
+  },
+  {
+   "fieldname": "fob_in_usd",
+   "fieldtype": "Currency",
+   "label": "FOB (In USD)"
+  },
+  {
+   "description": "(FOB = Free On Board, C&F = Cost and Freight, CIF = Cost insurance and Freight)",
+   "fieldname": "total_rate_on",
+   "fieldtype": "Select",
+   "label": "Total Rate On",
+   "options": "FOB\nC&F\nCIF"
+  },
+  {
+   "fieldname": "column_break_hecwh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_weight_with_box_in_gram",
+   "fieldtype": "Data",
+   "label": "Total Weight with box In gram"
+  },
+  {
+   "fieldname": "total_gold_weight",
+   "fieldtype": "Data",
+   "label": "Total Gold Weight"
+  },
+  {
+   "fieldname": "freight_charge_in_usd",
+   "fieldtype": "Currency",
+   "label": "Freight Charge (in USD)"
+  },
+  {
+   "description": "(FOB + Freight charges)",
+   "fieldname": "total_rate",
+   "fieldtype": "Currency",
+   "label": "Total Rate"
+  },
+  {
+   "fieldname": "gjepc_details_section",
+   "fieldtype": "Section Break",
+   "label": "GJEPC Details"
+  },
+  {
+   "fieldname": "file_name",
+   "fieldtype": "Data",
+   "label": "File Name"
+  },
+  {
+   "fieldname": "column_break_gupnq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Rate for 1 Ounce",
+   "fieldname": "rate_in_ounce",
+   "fieldtype": "Data",
+   "label": "Rate (in USD)"
+  },
+  {
+   "fieldname": "section_break_c7uxb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gjepc_metal_rate_details",
+   "fieldtype": "Table",
+   "label": "GJEPC Metal Rate Details",
+   "options": "GJEPC Metal Rate Details"
+  },
+  {
+   "fieldname": "section_break_qqjtz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "work_type",
+   "fieldtype": "Select",
+   "label": "Work Type ",
+   "options": "Order\nJob Work"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-15 10:10:17.539578",
+ "modified_by": "Administrator",
+ "module": "Custom Export",
+ "name": "Custom Office Invoice",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
