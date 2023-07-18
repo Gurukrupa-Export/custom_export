@@ -12,20 +12,23 @@
  "fields": [
   {
    "fieldname": "metal_touch",
-   "fieldtype": "Data",
-   "label": "Metal Touch"
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Metal Touch",
+   "options": "Attribute Value"
   },
   {
    "description": "Rate is Per Gram",
    "fieldname": "rate_in_usd",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Rate (in USD)"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-07-15 10:10:35.836171",
+ "modified": "2023-07-18 14:04:13.551370",
  "modified_by": "Administrator",
  "module": "Custom Export",
  "name": "GJEPC Metal Rate Details",
