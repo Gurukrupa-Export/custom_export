@@ -10,101 +10,136 @@
   "packing_slip_number",
   "item_code",
   "item_name",
+  "column_break_sn9oa",
   "quantity",
   "metal_touch",
+  "section_break_ifnbt",
   "gross_weight_in_gram",
-  "gold_weight_in_gram",
   "wastage_in_",
-  "gold_wastage_in_gram",
   "total_weight_in_gram",
+  "column_break_sf5dq",
+  "gold_weight_in_gram",
+  "gold_wastage_in_gram",
+  "section_break_kglqz",
   "diamond_shape",
   "diamond_pcs",
+  "fob_value",
+  "column_break_4m9zq",
   "diamond_in_carat",
-  "gemstone_type",
-  "fob_value"
+  "gemstone_type"
  ],
  "fields": [
   {
    "fieldname": "packing_slip_number",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Packing Slip Number"
   },
   {
    "fieldname": "item_code",
-   "fieldtype": "Data",
-   "label": "Item Code"
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
   },
   {
+   "fetch_from": "item_code.item_name",
    "fieldname": "item_name",
    "fieldtype": "Data",
    "label": "Item Name"
   },
   {
    "fieldname": "quantity",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Quantity"
   },
   {
    "fieldname": "metal_touch",
-   "fieldtype": "Data",
-   "label": "Metal Touch"
+   "fieldtype": "Link",
+   "label": "Metal Touch",
+   "options": "Attribute Value"
   },
   {
    "fieldname": "gross_weight_in_gram",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
+   "in_list_view": 1,
    "label": "Gross Weight (in Gram)"
   },
   {
    "fieldname": "gold_weight_in_gram",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Gold Weight (in Gram)"
   },
   {
    "fieldname": "wastage_in_",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
+   "in_list_view": 1,
    "label": "Wastage (in %)"
   },
   {
    "fieldname": "gold_wastage_in_gram",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Gold Wastage (in Gram)"
   },
   {
    "fieldname": "total_weight_in_gram",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Total Weight (in Gram)"
   },
   {
    "fieldname": "diamond_shape",
-   "fieldtype": "Data",
-   "label": "Diamond Shape"
+   "fieldtype": "Link",
+   "label": "Diamond Shape",
+   "options": "Attribute Value"
   },
   {
    "fieldname": "diamond_pcs",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Diamond Pcs"
   },
   {
    "fieldname": "diamond_in_carat",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Diamond in carat"
   },
   {
    "description": "Gemstone (Precious / Semi Precious) in Carat",
    "fieldname": "gemstone_type",
-   "fieldtype": "Data",
-   "label": "Gemstone Type"
+   "fieldtype": "Link",
+   "label": "Gemstone Type",
+   "options": "Attribute Value"
   },
   {
    "fieldname": "fob_value",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "FOB Value (In USD)"
+  },
+  {
+   "fieldname": "column_break_sn9oa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_sf5dq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ifnbt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_kglqz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_4m9zq",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-12-01 16:16:45.834519",
+ "modified": "2023-12-05 09:38:28.595189",
  "modified_by": "Administrator",
  "module": "Custom Export",
  "name": "Logistic Invoice Details",

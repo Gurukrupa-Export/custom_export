@@ -1,0 +1,27 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2023-12-08 10:44:56.459852",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "GE-1",
+ "modified": "2023-12-08 10:44:56.459852",
+ "modified_by": "Administrator",
+ "module": "Custom Export",
+ "name": "Packing List test",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Packing List",
+ "report_name": "Packing List test",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

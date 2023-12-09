@@ -3,11 +3,11 @@
 
 import frappe
 import pandas as pd
-import easyocr
+# import easyocr
 import requests,json
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 from urllib.parse import urljoin
-from pdf2image import convert_from_path
+# from pdf2image import convert_from_path
 import numpy as np
 from frappe.model.document import Document
 import torch
@@ -47,7 +47,7 @@ def get_gjepc_rate():
 	response = requests.request("GET", url, headers=headers, data=payload)
 	json_data = json.loads(response.text)
 	gjepc_rate = json_data[-1]['v'][0]
-
+	# print(json_data)
 	usd_kt_22 = round(float((gjepc_rate)*22)/24,2)
 	usd_kt_18 = round((float(gjepc_rate)*18)/24,2)
 	usd_kt_14 = round((float(gjepc_rate)*14)/24,2)

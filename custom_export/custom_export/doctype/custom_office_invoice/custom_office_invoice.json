@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:EXP-{date}-{####}",
+ "autoname": "field:i_no",
  "creation": "2023-07-12 14:06:03.584841",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,7 +9,9 @@
  "engine": "InnoDB",
  "field_order": [
   "exporter",
+  "sequence",
   "address",
+  "i_no",
   "invoice_no",
   "place_of_receipt_by_pre_carrier",
   "column_break_01ely",
@@ -35,14 +37,24 @@
   "final_destination",
   "pre_carriage_by",
   "vessel_or_flight",
-  "description_of_goods",
+  "third_party",
   "column_break_rqwdm",
   "consignee_address",
   "country_of_final_destination",
   "port_of_destination",
   "no_of_packages",
-  "packing_slip",
+  "third_party_details_section",
+  "party",
+  "party_final_destination",
+  "party_pre_carriage_by",
+  "party_vessel_or_flight",
+  "column_break_xtsnq",
+  "party_address",
+  "party_country_of_final_destination",
+  "party_port_of_destination",
+  "party_no_of_packages",
   "description",
+  "get_items_from_packing_list",
   "description_of_goods_1",
   "section_break_tuuho",
   "total_pcs",
@@ -61,7 +73,11 @@
   "section_break_c7uxb",
   "gjepc_metal_rate_details",
   "section_break_qqjtz",
-  "work_type"
+  "work_type",
+  "job_work_import_details_tab",
+  "job_work_item_details",
+  "total_fob_value_in_dollar",
+  "amended_from"
  ],
  "fields": [
   {
@@ -90,6 +106,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date"
@@ -116,11 +133,13 @@
    "label": "Exporter's Reference "
   },
   {
+   "fetch_from": "exporter.custom_iec_no",
    "fieldname": "iec_code",
    "fieldtype": "Data",
    "label": "IEC Code"
   },
   {
+   "fetch_from": "exporter.custom_gstin",
    "fieldname": "gstn",
    "fieldtype": "Data",
    "label": "GSTN"
@@ -130,6 +149,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "exporter.custom_pan",
    "fieldname": "pan_no",
    "fieldtype": "Data",
    "label": "PAN No"
@@ -140,16 +160,19 @@
    "label": "Terms of Delivery and Payment"
   },
   {
+   "fetch_from": "exporter.custom_account_no",
    "fieldname": "account_no",
    "fieldtype": "Data",
    "label": "Account No"
   },
   {
+   "fetch_from": "exporter.custom_bank",
    "fieldname": "bank",
    "fieldtype": "Data",
    "label": "Bank"
   },
   {
+   "fetch_from": "exporter.custom_bank_address",
    "fieldname": "bank_address",
    "fieldtype": "Data",
    "label": "Bank Address"
@@ -159,11 +182,13 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "exporter.custom_ifsc_code",
    "fieldname": "ifsc_code",
    "fieldtype": "Data",
    "label": "IFSC Code"
   },
   {
+   "fetch_from": "exporter.custom_ad_code",
    "fieldname": "ad_code",
    "fieldtype": "Data",
    "label": "AD Code"
@@ -180,8 +205,9 @@
   },
   {
    "fieldname": "consignee",
-   "fieldtype": "Data",
-   "label": "Consignee"
+   "fieldtype": "Link",
+   "label": "Consignee",
+   "options": "Customer"
   },
   {
    "fieldname": "final_destination",
@@ -189,20 +215,17 @@
    "label": "Final Destination"
   },
   {
+   "default": "SEQUEL",
    "fieldname": "pre_carriage_by",
    "fieldtype": "Data",
-   "label": "Pre Carriage By "
+   "label": "Pre Carriage By ",
+   "read_only": 1
   },
   {
    "default": "AIR FREIGHT",
    "fieldname": "vessel_or_flight",
    "fieldtype": "Data",
    "label": "Vessel or Flight"
-  },
-  {
-   "fieldname": "description_of_goods",
-   "fieldtype": "Data",
-   "label": "Description of Goods"
   },
   {
    "fieldname": "column_break_rqwdm",
@@ -230,15 +253,9 @@
    "label": "No of Packages "
   },
   {
-   "fieldname": "packing_slip",
-   "fieldtype": "Link",
-   "label": "Packing Slip",
-   "options": "Packing Slip"
-  },
-  {
    "fieldname": "description",
    "fieldtype": "Section Break",
-   "label": "Packing Slip Description "
+   "label": "Party Packing Slip Description"
   },
   {
    "fieldname": "description_of_goods_1",
@@ -262,7 +279,7 @@
   },
   {
    "fieldname": "fob_in_usd",
-   "fieldtype": "Currency",
+   "fieldtype": "Float",
    "label": "FOB (In USD)"
   },
   {
@@ -288,13 +305,13 @@
   },
   {
    "fieldname": "freight_charge_in_usd",
-   "fieldtype": "Currency",
+   "fieldtype": "Float",
    "label": "Freight Charge (in USD)"
   },
   {
    "description": "(FOB + Freight charges)",
    "fieldname": "total_rate",
-   "fieldtype": "Currency",
+   "fieldtype": "Float",
    "label": "Total Rate"
   },
   {
@@ -336,15 +353,120 @@
    "fieldtype": "Select",
    "label": "Work Type ",
    "options": "Order\nJob Work"
+  },
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "sequence"
+  },
+  {
+   "fieldname": "i_no",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Invoice No",
+   "unique": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Custom Office Invoice",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.work_type == \"Job Work\"",
+   "fieldname": "job_work_import_details_tab",
+   "fieldtype": "Table",
+   "label": "Job Work Import Details",
+   "options": "Job Work Import Details"
+  },
+  {
+   "depends_on": "eval:doc.work_type == \"Job Work\"",
+   "fieldname": "job_work_item_details",
+   "fieldtype": "Table",
+   "label": "Job Work Item Details",
+   "options": "Job Work Item Details"
+  },
+  {
+   "fieldname": "total_fob_value_in_dollar",
+   "fieldtype": "Data",
+   "label": "Total FOB Value (in $)"
+  },
+  {
+   "depends_on": "eval:doc.third_party",
+   "fieldname": "third_party_details_section",
+   "fieldtype": "Section Break",
+   "label": "Third Party Details"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Link",
+   "label": "Party",
+   "options": "Customer"
+  },
+  {
+   "default": "0",
+   "fieldname": "third_party",
+   "fieldtype": "Check",
+   "label": "Third Party"
+  },
+  {
+   "fieldname": "party_final_destination",
+   "fieldtype": "Data",
+   "label": "Party Final Destination"
+  },
+  {
+   "fieldname": "party_pre_carriage_by",
+   "fieldtype": "Data",
+   "label": "Party Pre Carriage By"
+  },
+  {
+   "fieldname": "party_vessel_or_flight",
+   "fieldtype": "Data",
+   "label": "Party Vessel or Flight"
+  },
+  {
+   "fieldname": "column_break_xtsnq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "party_address",
+   "fieldtype": "Data",
+   "label": "Party Address"
+  },
+  {
+   "fieldname": "party_country_of_final_destination",
+   "fieldtype": "Link",
+   "label": "Party Country of Final Destination",
+   "options": "Country"
+  },
+  {
+   "fieldname": "party_port_of_destination",
+   "fieldtype": "Data",
+   "label": "Party Port of Destination"
+  },
+  {
+   "fieldname": "party_no_of_packages",
+   "fieldtype": "Data",
+   "label": "Party No of Packages"
+  },
+  {
+   "fieldname": "get_items_from_packing_list",
+   "fieldtype": "Button",
+   "label": "Get Items From Packing List"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-07-15 10:10:17.539578",
+ "modified": "2023-12-06 16:12:58.512526",
  "modified_by": "Administrator",
  "module": "Custom Export",
  "name": "Custom Office Invoice",
- "naming_rule": "Expression",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

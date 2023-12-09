@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-12-09 10:49:03.534255",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company_details_section",
+  "company",
+  "company_address",
+  "section_break_gb046",
+  "date",
+  "gst_no",
+  "details_section",
+  "customer",
+  "address",
+  "statecode",
+  "column_break_4fek2",
+  "customer_name",
+  "gst_number",
+  "reference_no",
+  "section_break_3trha",
+  "delivery_challan_detail",
+  "remarks",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_gb046",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_address",
+   "fieldtype": "Data",
+   "label": "Company Address"
+  },
+  {
+   "fetch_from": "company.custom_gstin",
+   "fieldname": "gst_no",
+   "fieldtype": "Data",
+   "label": "Company GST No."
+  },
+  {
+   "fieldname": "gst_number",
+   "fieldtype": "Data",
+   "label": "GST"
+  },
+  {
+   "fieldname": "reference_no",
+   "fieldtype": "Data",
+   "label": "Reference No."
+  },
+  {
+   "fieldname": "column_break_4fek2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "section_break_3trha",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "statecode",
+   "fieldtype": "Data",
+   "label": "State/Code"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "delivery_challan_detail",
+   "fieldtype": "Table",
+   "label": "Dispatch Slip Detail",
+   "options": "Dispatch Slip Detail"
+  },
+  {
+   "fieldname": "company_details_section",
+   "fieldtype": "Section Break",
+   "label": "Company Details"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "DIS-"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-09 12:54:46.866601",
+ "modified_by": "Administrator",
+ "module": "Custom Export",
+ "name": "Dispatch Slip",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

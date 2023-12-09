@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-09 10:58:41.339968",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "description",
+  "hsn",
+  "amount",
+  "column_break_wkdnp",
+  "pieces",
+  "purity",
+  "gross_weight",
+  "net_weight",
+  "section_break_plwqk"
+ ],
+ "fields": [
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "hsn",
+   "fieldtype": "Data",
+   "label": "HSN "
+  },
+  {
+   "fieldname": "pieces",
+   "fieldtype": "Data",
+   "label": "Pieces"
+  },
+  {
+   "fieldname": "purity",
+   "fieldtype": "Data",
+   "label": "Metal Touch"
+  },
+  {
+   "fieldname": "gross_weight",
+   "fieldtype": "Data",
+   "label": "Gross Weight"
+  },
+  {
+   "fieldname": "net_weight",
+   "fieldtype": "Data",
+   "label": "Net Weight"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "column_break_wkdnp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_plwqk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Data",
+   "label": "Item "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-09 12:10:58.076550",
+ "modified_by": "Administrator",
+ "module": "Custom Export",
+ "name": "Dispatch Slip Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
