@@ -1,0 +1,329 @@
+{
+ "_liked_by": "[\"Administrator\", \"chanchal@gk.com\"]",
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-12-28 16:55:34.648529",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "workflow_state",
+  "attach",
+  "image",
+  "section_break_bje2s",
+  "item_category",
+  "item_sub_category",
+  "setting_type",
+  "old_style_bio",
+  "diamond_pcs",
+  "diamond_weight",
+  "total_gold_weight",
+  "total_chain_weight",
+  "column_break_oo53s",
+  "date",
+  "old_sub_category",
+  "pair_stylebio_no",
+  "old_tag_number",
+  "total_diamond_pcs",
+  "total_diamond_weight",
+  "total_stone_weight",
+  "total_other_weight",
+  "attributes_section",
+  "age_group",
+  "alphabet",
+  "animals_birds",
+  "collection",
+  "design_style",
+  "gender",
+  "relationship_column",
+  "language",
+  "lines_rows",
+  "occasion",
+  "religious",
+  "rhodium",
+  "shape",
+  "zodiac",
+  "section_break_wgzby",
+  "naming_series",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Workflow State",
+   "no_copy": 1,
+   "options": "Workflow State"
+  },
+  {
+   "fieldname": "attach",
+   "fieldtype": "Attach Image",
+   "label": "Attach Image",
+   "options": "image"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Image",
+   "label": "Image",
+   "options": "attach"
+  },
+  {
+   "collapsible_depends_on": "doc:Trim",
+   "fieldname": "section_break_bje2s",
+   "fieldtype": "Section Break",
+   "label": "Style Bio Details"
+  },
+  {
+   "default": "Mugappu",
+   "fieldname": "item_category",
+   "fieldtype": "Data",
+   "label": "Item category",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_sub_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "New Item sub category",
+   "options": "\nAnt Mugappu\nBall Mugappu\nCocktail Mugappu\nDaily Wear Mugappu\nFancy Mugappu\nGod Mugappu\nNakshi Mugappu\nSpiral Mugappu\nSolitaire Mugappu",
+   "reqd": 1
+  },
+  {
+   "default": "Open Setting",
+   "fieldname": "setting_type",
+   "fieldtype": "Data",
+   "label": "Setting Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "old_style_bio",
+   "fieldtype": "Data",
+   "label": "Old Style Bio",
+   "read_only": 1
+  },
+  {
+   "fieldname": "diamond_pcs",
+   "fieldtype": "Data",
+   "label": "Diamond Pcs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "diamond_weight",
+   "fieldtype": "Data",
+   "label": "Diamond Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_gold_weight",
+   "fieldtype": "Data",
+   "label": "Tag Gold Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_chain_weight",
+   "fieldtype": "Data",
+   "label": "Tag Chain Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_oo53s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "old_sub_category",
+   "fieldtype": "Data",
+   "label": "Old Sub Category",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pair_stylebio_no",
+   "fieldtype": "Data",
+   "label": "Pair StyleBio No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "old_tag_number",
+   "fieldtype": "Data",
+   "label": "Old Tag Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_diamond_pcs",
+   "fieldtype": "Data",
+   "label": "Tag Diamond Pcs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_diamond_weight",
+   "fieldtype": "Data",
+   "label": "Tag Diamond Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_stone_weight",
+   "fieldtype": "Data",
+   "label": "Tag Stone Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_other_weight",
+   "fieldtype": "Data",
+   "label": "Tag Other Weight",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "attributes_section",
+   "fieldtype": "Section Break",
+   "label": "Attributes"
+  },
+  {
+   "fieldname": "age_group",
+   "fieldtype": "Table MultiSelect",
+   "label": "Age Group",
+   "options": "Design Attributes Multi Select",
+   "reqd": 1
+  },
+  {
+   "fieldname": "alphabet",
+   "fieldtype": "Table MultiSelect",
+   "label": "Alphabet/Number",
+   "options": "Design Attributes Multi Select"
+  },
+  {
+   "fieldname": "animals_birds",
+   "fieldtype": "Table MultiSelect",
+   "label": "Animals/Birds",
+   "options": "Design Attributes Multi Select"
+  },
+  {
+   "fieldname": "collection",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "label": "Collection",
+   "options": "Design Attributes Multi Select"
+  },
+  {
+   "fieldname": "design_style",
+   "fieldtype": "Table MultiSelect",
+   "label": "Design Style",
+   "options": "Design Attributes Multi Select",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Table MultiSelect",
+   "label": "Gender",
+   "options": "Design Attributes Multi Select",
+   "reqd": 1
+  },
+  {
+   "fieldname": "relationship_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Table MultiSelect",
+   "label": "Language",
+   "options": "Design Attributes Multi Select"
+  },
+  {
+   "fieldname": "lines_rows",
+   "fieldtype": "Table MultiSelect",
+   "label": "Lines & Rows",
+   "options": "Design Attributes Multi Select"
+  },
+  {
+   "fieldname": "occasion",
+   "fieldtype": "Table MultiSelect",
+   "label": "Occasion",
+   "options": "Design Attributes Multi Select",
+   "reqd": 1
+  },
+  {
+   "fieldname": "religious",
+   "fieldtype": "Table MultiSelect",
+   "label": "Religious",
+   "options": "Design Attributes Multi Select"
+  },
+  {
+   "fieldname": "rhodium",
+   "fieldtype": "Table MultiSelect",
+   "label": "Rhodium",
+   "options": "Design Attributes Multi Select",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shape",
+   "fieldtype": "Table MultiSelect",
+   "label": "Shapes",
+   "options": "Design Attributes Multi Select"
+  },
+  {
+   "fieldname": "zodiac",
+   "fieldtype": "Table MultiSelect",
+   "label": "Zodiac",
+   "options": "Design Attributes Multi Select"
+  },
+  {
+   "fieldname": "section_break_wgzby",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "OPEN-"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Ring-Old Style Bio-Close",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-03 09:59:55.322413",
+ "modified_by": "Administrator",
+ "module": "Custom Export",
+ "name": "Mugappu Old Style Bio Open",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
